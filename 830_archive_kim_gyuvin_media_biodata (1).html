@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>830 ARCHIVE — Kim Gyuvin Media & Biodata</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"Space Mono"', 'monospace'],
+                    },
+                    colors: {
+                        skybase: '#EEF4FA',
+                        skycard: '#FFFFFF',
+                        skysoft: '#D7E7F8',
+                        skyaccent: '#8EB8E5',
+                        skydark: '#5C8DC4',
+                        ink: '#1F2E3D',
+                        muted: '#6D8196',
+                        sage: '#8DB89B',
+                    },
+                    boxShadow: {
+                        window: '0 14px 36px -10px rgba(92, 141, 196, 0.20), 0 4px 12px -4px rgba(31, 46, 61, 0.06)',
+                        float: '0 10px 24px -6px rgba(92, 141, 196, 0.45)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #EEF4FA;
+            background-image: radial-gradient(#C7DDF4 0.85px, transparent 0.85px);
+            background-size: 20px 20px;
+            color: #1F2E3D;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Kuping tab folder Tistory di bagian kiri atas window */
+        .folder-tab {
+            position: relative;
+        }
+        .folder-tab::before {
+            content: '';
+            position: absolute;
+            top: -11px;
+            left: 18px;
+            width: 84px;
+            height: 13px;
+            background: #FFFFFF;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top: 1px solid #DCE9F6;
+            border-left: 1px solid #DCE9F6;
+            border-right: 1px solid #DCE9F6;
+        }
+
+        /* Animasi halus untuk modal dan popup */
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px) scale(0.985);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .animate-pop {
+            animation: popIn 0.2s ease-out forwards;
+        }
+
+        /* Custom scrollbar tipis */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BDD5EE;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-skysoft selection:text-ink">
+
+    <!-- Container Utama -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pt-5 pb-28">
+
+        <!-- TOP BAR / HEADER 830 ARCHIVE -->
+        <header class="bg-skycard/95 backdrop-blur border border-[#DCE9F6] rounded-3xl px-4 py-3.5 shadow-window mb-6 flex flex-wrap items-center justify-between gap-3">
+            <!-- Kiri: Foto Profil Folder Biru Muda & Judul -->
+            <div class="flex items-center gap-3 min-w-0">
+                <div class="w-11 h-11 rounded-2xl bg-skysoft border border-skyaccent/50 flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
+                    <img
+                        id="profileAvatar"
+                        src="1001831231.jpg"
+                        alt="830 ARCHIVE Folder Avatar"
+                        class="w-full h-full object-cover"
+                        onerror="this.style.display='none'; document.getElementById('fallbackFolderSvg').classList.remove('hidden');"
+                    >
+                    <!-- SVG Cadangan Folder Biru Muda -->
+                    <svg id="fallbackFolderSvg" class="hidden w-7 h-7 text-skydark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z" fill="#D7E7F8"/>
+                        <path d="M16 11l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" fill="#FFFFFF" stroke="none"/>
+                    </svg>
+                </div>
+
+                <div class="min-w-0">
+                    <div class="flex items-center gap-2">
+                        <h1 class="font-mono font-bold text-sm sm:text-base tracking-tight text-ink truncate">830 ARCHIVE</h1>
+                        <span class="hidden sm:inline-block font-mono text-[10px] px-2 py-0.5 rounded-full bg-skysoft text-skydark font-bold">08.30</span>
+                    </div>
+                    <p class="text-xs text-muted truncate">Kim Gyuvin Media Vault &amp; Profile</p>
+                </div>
+            </div>
+
+            <!-- Kanan: Tab Home / Archive & Tombol Buka Menu.txt -->
+            <div class="flex items-center gap-1.5 sm:gap-2">
+                <div class="bg-skybase p-1 rounded-2xl border border-[#DCE9F6] flex items-center">
+                    <button
+                        type="button"
+                        id="navHomeBtn"
+                        onclick="switchView('home')"
+                        class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-skycard text-skydark shadow-xs"
+                    >
+                        Home
+                    </button>
+                    <button
+                        type="button"
+                        id="navArchiveBtn"
+                        onclick="switchView('archive')"
+                        class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-muted hover:text-ink flex items-center gap-1.5"
+                    >
+                        <span>Archive</span>
+                        <span id="headerTotalBadge" class="font-mono text-[10px] px-1.5 py-0.2 rounded-full bg-skysoft text-skydark font-bold">0</span>
+                    </button>
+                </div>
+
+                <button
+                    type="button"
+                    onclick="openMenuModal()"
+                    class="px-3.5 py-2 rounded-2xl bg-skyaccent hover:bg-skydark text-white font-mono text-xs font-bold transition-all shadow-xs flex items-center gap-1.5"
+                    title="Buka Menu.txt"
+                >
+                    <span>Menu.txt</span>
+                    <span class="w-2 h-2 rounded-full bg-sage inline-block"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ========================================================= -->
+        <!-- HALAMAN 1: HOME (BIODATA GYUVIN, FUN FACTS & OFFICIAL LINKS) -->
+        <!-- ========================================================= -->
+        <main id="homeView" class="space-y-6">
+
+            <!-- Window Kartu Utama: Biodata Kim Gyuvin -->
+            <section class="folder-tab bg-skycard border border-[#DCE9F6] rounded-3xl p-5 sm:p-7 shadow-window">
+                <div class="flex items-center justify-between border-b border-skysoft pb-3 mb-5">
+                    <div class="flex items-center gap-2">
+                        <span class="font-mono text-xs font-bold text-skydark bg-skysoft px-2.5 py-1 rounded-lg">PROFILE.TXT</span>
+                        <span class="text-xs text-muted">Kim Gyuvin (김규빈)</span>
+                    </div>
+                    <span class="w-3 h-3 rounded-full bg-sage"></span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center mb-6">
+                    <div class="w-20 h-20 rounded-3xl bg-skysoft border-2 border-skyaccent/60 flex items-center justify-center shrink-0 overflow-hidden">
+                        <img
+                            src="1001831231.jpg"
+                            alt="830 Folder Icon"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                        >
+                        <span class="hidden font-mono font-bold text-lg text-skydark">830</span>
+                    </div>
+                    <div>
+                        <p class="font-mono text-xs uppercase tracking-wider text-skydark font-bold mb-1">ZEROBASEONE · ARCHIVE</p>
+                        <h2 class="text-2xl font-extrabold text-ink tracking-tight">Kim Gyuvin</h2>
+                        <p class="text-sm text-muted mt-1 leading-relaxed">
+                            Arsip pribadi koleksi foto, video, dan momen harian Kim Gyuvin yang dikelompokkan rapi berdasarkan folder platform.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Grid Biodata -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div class="bg-skybase/80 border border-[#DCE9F6] rounded-2xl p-3.5">
+                        <p class="font-mono text-[11px] text-muted">BIRTHDAY</p>
+                        <p class="font-mono font-bold text-sm text-ink mt-0.5">2004.08.30</p>
+                    </div>
+                    <div class="bg-skybase/80 border border-[#DCE9F6] rounded-2xl p-3.5">
+                        <p class="font-mono text-[11px] text-muted">HEIGHT</p>
+                        <p class="font-mono font-bold text-sm text-ink mt-0.5">188 cm</p>
+                    </div>
+                    <div class="bg-skybase/80 border border-[#DCE9F6] rounded-2xl p-3.5">
+                        <p class="font-mono text-[11px] text-muted">MBTI</p>
+                        <p class="font-mono font-bold text-sm text-skydark mt-0.5">ENFP</p>
+                    </div>
+                    <div class="bg-skybase/80 border border-[#DCE9F6] rounded-2xl p-3.5">
+                        <p class="font-mono text-[11px] text-muted">GROUP</p>
+                        <p class="font-bold text-sm text-ink mt-0.5">ZEROBASEONE</p>
+                    </div>
+                    <div class="bg-skybase/80 border border-[#DCE9F6] rounded-2xl p-3.5">
+                        <p class="font-mono text-[11px] text-muted">HOMETOWN</p>
+                        <p class="font-bold text-sm text-ink mt-0.5">Seoul, South Korea</p>
+                    </div>
+                    <div class="bg-skybase/80 border border-[#DCE9F6] rounded-2xl p-3.5">
+                        <p class="font-mono text-[11px] text-muted">ARCHIVE CODE</p>
+                        <p class="font-mono font-bold text-sm text-skydark mt-0.5">#830</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Window Kartu: Fun Facts & TMI -->
+            <section class="folder-tab bg-skycard border border-[#DCE9F6] rounded-3xl p-5 sm:p-7 shadow-window">
+                <div class="flex items-center justify-between border-b border-skysoft pb-3 mb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="font-mono text-xs font-bold text-skydark bg-skysoft px-2.5 py-1 rounded-lg">TMI_FACTS.TXT</span>
+                        <span class="text-xs text-muted">Fun Facts &amp; Little Details</span>
+                    </div>
+                    <span class="w-3 h-3 rounded-full bg-sage"></span>
+                </div>
+
+                <ul class="space-y-3 text-sm text-ink">
+                    <li class="flex items-start gap-3 bg-skybase/65 rounded-2xl p-3.5 border border-[#E3EFFA]">
+                        <span class="font-mono text-xs font-bold text-white bg-skyaccent rounded-lg px-2 py-0.5 mt-0.5 shrink-0">01</span>
+                        <p class="leading-relaxed">Lahir pada <span class="font-semibold">30 Agustus</span>—angka <span class="font-mono font-semibold text-skydark">830</span> menjadi identitas utama arsip ini.</p>
+                    </li>
+                    <li class="flex items-start gap-3 bg-skybase/65 rounded-2xl p-3.5 border border-[#E3EFFA]">
+                        <span class="font-mono text-xs font-bold text-white bg-skyaccent rounded-lg px-2 py-0.5 mt-0.5 shrink-0">02</span>
+                        <p class="leading-relaxed">Dikenal dengan energi <span class="font-semibold">ENFP</span> yang ekspresif, ceria, dan gampang bikin suasana sekitar terasa hidup.</p>
+                    </li>
+                    <li class="flex items-start gap-3 bg-skybase/65 rounded-2xl p-3.5 border border-[#E3EFFA]">
+                        <span class="font-mono text-xs font-bold text-white bg-skyaccent rounded-lg px-2 py-0.5 mt-0.5 shrink-0">03</span>
+                        <p class="leading-relaxed">Memiliki proporsi tubuh tinggi (<span class="font-mono font-semibold">188 cm</span>) dengan gaya berpakaian santai maupun rapi yang fotogenik.</p>
+                    </li>
+                    <li class="flex items-start gap-3 bg-skybase/65 rounded-2xl p-3.5 border border-[#E3EFFA]">
+                        <span class="font-mono text-xs font-bold text-white bg-skyaccent rounded-lg px-2 py-0.5 mt-0.5 shrink-0">04</span>
+                        <p class="leading-relaxed">Sering membagikan update singkat, foto candid, dan video keseharian lewat berbagai kanal resmi maupun fan platform.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Window Kartu: Official Links & Socials -->
+            <section class="folder-tab bg-skycard border border-[#DCE9F6] rounded-3xl p-5 sm:p-7 shadow-window">
+                <div class="flex items-center justify-between border-b border-skysoft pb-3 mb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="font-mono text-xs font-bold text-skydark bg-skysoft px-2.5 py-1 rounded-lg">LINKS.TXT</span>
+                        <span class="text-xs text-muted">Klik kartu untuk membuka tautan</span>
+                    </div>
+                    <span class="w-3 h-3 rounded-full bg-sage"></span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <!-- X / Twitter -->
+                    <a
+                        href="https://x.com/ZB1_official"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex items-center justify-between p-4 rounded-2xl bg-skybase/75 hover:bg-skysoft/70 border border-[#DCE9F6] transition-all"
+                    >
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="w-10 h-10 rounded-xl bg-skycard border border-[#DCE9F6] flex items-center justify-center font-mono font-bold text-sm text-skydark shrink-0">X</span>
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm text-ink truncate">X / Twitter</p>
+                                <p class="font-mono text-xs text-muted truncate">@ZB1_official</p>
+                            </div>
+                        </div>
+                        <span class="text-skydark group-hover:translate-x-1 transition-transform font-mono text-sm">→</span>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a
+                        href="https://www.instagram.com/zb1official/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex items-center justify-between p-4 rounded-2xl bg-skybase/75 hover:bg-skysoft/70 border border-[#DCE9F6] transition-all"
+                    >
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="w-10 h-10 rounded-xl bg-skycard border border-[#DCE9F6] flex items-center justify-center font-mono font-bold text-xs text-skydark shrink-0">IG</span>
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm text-ink truncate">Instagram</p>
+                                <p class="font-mono text-xs text-muted truncate">@zb1official</p>
+                            </div>
+                        </div>
+                        <span class="text-skydark group-hover:translate-x-1 transition-transform font-mono text-sm">→</span>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a
+                        href="https://www.youtube.com/@ZB1_official"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex items-center justify-between p-4 rounded-2xl bg-skybase/75 hover:bg-skysoft/70 border border-[#DCE9F6] transition-all"
+                    >
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="w-10 h-10 rounded-xl bg-skycard border border-[#DCE9F6] flex items-center justify-center font-mono font-bold text-xs text-skydark shrink-0">YT</span>
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm text-ink truncate">YouTube</p>
+                                <p class="font-mono text-xs text-muted truncate">@ZB1_official</p>
+                            </div>
+                        </div>
+                        <span class="text-skydark group-hover:translate-x-1 transition-transform font-mono text-sm">→</span>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a
+                        href="https://www.tiktok.com/@zb1_official"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex items-center justify-between p-4 rounded-2xl bg-skybase/75 hover:bg-skysoft/70 border border-[#DCE9F6] transition-all"
+                    >
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="w-10 h-10 rounded-xl bg-skycard border border-[#DCE9F6] flex items-center justify-center font-mono font-bold text-xs text-skydark shrink-0">TT</span>
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm text-ink truncate">TikTok</p>
+                                <p class="font-mono text-xs text-muted truncate">@zb1_official</p>
+                            </div>
+                        </div>
+                        <span class="text-skydark group-hover:translate-x-1 transition-transform font-mono text-sm">→</span>
+                    </a>
+
+                    <!-- Plus Chat -->
+                    <a
+                        href="https://mnetplus.world/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group sm:col-span-2 flex items-center justify-between p-4 rounded-2xl bg-skysoft/55 hover:bg-skysoft border border-skyaccent/40 transition-all"
+                    >
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="w-10 h-10 rounded-xl bg-skycard border border-skyaccent/40 flex items-center justify-center font-mono font-bold text-xs text-skydark shrink-0">PC</span>
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm text-ink truncate">Mnet Plus Chat</p>
+                                <p class="font-mono text-xs text-muted truncate">mnetplus.world</p>
+                            </div>
+                        </div>
+                        <span class="text-skydark group-hover:translate-x-1 transition-transform font-mono text-sm">→</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- ========================================================= -->
+        <!-- HALAMAN 2: ARCHIVE (GALERI FOTO & VIDEO PER FOLDER)       -->
+        <!-- ========================================================= -->
+        <section id="archiveView" class="hidden space-y-5">
+            <div class="folder-tab bg-skycard border border-[#DCE9F6] rounded-3xl p-5 sm:p-7 shadow-window">
+                <div class="flex flex-wrap items-center justify-between gap-3 border-b border-skysoft pb-4 mb-5">
+                    <div>
+                        <span class="font-mono text-xs font-bold text-skydark bg-skysoft px-2.5 py-1 rounded-lg">MEDIA_VAULT</span>
+                        <h2 id="activeFolderTitle" class="text-xl font-extrabold text-ink mt-2">Semua Folder</h2>
+                        <p id="activeFolderCountText" class="text-xs text-muted mt-0.5">0 item tersimpan</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button
+                            type="button"
+                            onclick="openMenuModal()"
+                            class="px-3 py-2 rounded-xl bg-skybase hover:bg-skysoft text-ink font-mono text-xs font-semibold border border-[#DCE9F6] transition-all"
+                        >
+                            Pilih Folder
+                        </button>
+                        <button
+                            type="button"
+                            onclick="openUploadModal()"
+                            class="px-3.5 py-2 rounded-xl bg-skyaccent hover:bg-skydark text-white text-xs font-bold transition-all shadow-xs"
+                        >
+                            + Upload File
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filter Kategori & Filter Tipe Media -->
+                <div class="space-y-3 mb-6">
+                    <!-- Filter Tipe (Semua / Foto / Video) -->
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <div class="inline-flex bg-skybase p-1 rounded-2xl border border-[#DCE9F6]">
+                            <button type="button" data-type="ALL" onclick="setTypeFilter('ALL')" class="type-filter-btn px-3 py-1 rounded-xl text-xs font-bold bg-skycard text-skydark shadow-xs">Semua</button>
+                            <button type="button" data-type="photo" onclick="setTypeFilter('photo')" class="type-filter-btn px-3 py-1 rounded-xl text-xs font-semibold text-muted hover:text-ink">Foto</button>
+                            <button type="button" data-type="video" onclick="setTypeFilter('video')" class="type-filter-btn px-3 py-1 rounded-xl text-xs font-semibold text-muted hover:text-ink">Video</button>
+                        </div>
+
+                        <button
+                            type="button"
+                            id="resetFiltersBtn"
+                            onclick="resetArchiveFilters()"
+                            class="hidden text-xs font-mono text-skydark hover:underline"
+                        >
+                            Reset filter
+                        </button>
+                    </div>
+
+                    <!-- Chip Folder Kategori -->
+                    <div id="categoryChipsContainer" class="flex items-center gap-2 overflow-x-auto pb-1">
+                        <!-- Diisi otomatis lewat JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Grid Media -->
+                <div id="mediaGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
+                    <!-- Diisi otomatis lewat JavaScript -->
+                </div>
+
+                <!-- Tampilan Kosong (Default saat awal) -->
+                <div id="emptyArchiveState" class="text-center py-14 px-4 rounded-3xl bg-skybase/60 border border-dashed border-skyaccent/60">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-skysoft text-skydark flex items-center justify-center mb-3">
+                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"/>
+                            <path d="M12 11v6M9 14h6"/>
+                        </svg>
+                    </div>
+                    <p class="font-bold text-sm text-ink">Arsip masih kosong</p>
+                    <p class="text-xs text-muted mt-1 max-w-xs mx-auto">
+                        Belum ada foto atau video di folder ini. Tekan tombol <span class="font-mono font-bold text-skydark">+</span> untuk mengunggah file dari perangkatmu.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Tombol Mengambang "+" untuk Upload Foto / Video -->
+    <button
+        type="button"
+        onclick="openUploadModal()"
+        aria-label="Unggah Foto atau Video"
+        class="fixed bottom-6 right-6 z-30 w-14 h-14 rounded-full bg-skyaccent hover:bg-skydark text-white shadow-float flex items-center justify-center text-2xl font-bold transition-transform hover:scale-105 active:scale-95"
+    >
+        +
+    </button>
+
+    <!-- ========================================================= -->
+    <!-- POPUP MODAL: MENU.TXT                                      -->
+    <!-- ========================================================= -->
+    <div id="menuModal" class="hidden fixed inset-0 z-40 bg-ink/35 backdrop-blur-xs flex items-center justify-center p-4" onclick="handleBackdropClick(event, 'menuModal')">
+        <div class="animate-pop w-full max-w-md bg-skycard border border-[#DCE9F6] rounded-3xl p-5 sm:p-6 shadow-window max-h-[88vh] flex flex-col">
+            <!-- Header Menu.txt dengan titik hijau sage di kanan atas -->
+            <div class="flex items-center justify-between pb-4 border-b border-skysoft">
+                <div class="w-6"></div>
+                <h2 class="font-mono font-bold text-base text-ink tracking-tight">Menu.txt</h2>
+                <button
+                    type="button"
+                    onclick="closeMenuModal()"
+                    aria-label="Tutup Menu.txt"
+                    class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-skysoft transition-colors"
+                >
+                    <span class="w-3 h-3 rounded-full bg-sage inline-block"></span>
+                </button>
+            </div>
+
+            <!-- Baris Ikon Lonceng & Guestbook Bulat + Search Bergaris Bawah -->
+            <div class="flex items-center gap-3 my-4">
+                <button
+                    type="button"
+                    onclick="showToast('Notifikasi 830 ARCHIVE aktif — siap menyimpan media baru.')"
+                    aria-label="Notifikasi"
+                    class="w-10 h-10 rounded-full bg-skybase hover:bg-skysoft border border-[#DCE9F6] flex items-center justify-center text-skydark shrink-0 transition-colors"
+                >
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                </button>
+
+                <button
+                    type="button"
+                    onclick="showToast('Guestbook 830 ARCHIVE terbuka untuk catatan arsipmu.')"
+                    aria-label="Guestbook"
+                    class="w-10 h-10 rounded-full bg-skybase hover:bg-skysoft border border-[#DCE9F6] flex items-center justify-center text-skydark shrink-0 transition-colors"
+                >
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        <path d="M8 9h8M8 13h5"/>
+                    </svg>
+                </button>
+
+                <!-- Kolom Pencarian Bergaris Bawah -->
+                <div class="flex-1 flex items-center border-b-2 border-skyaccent/60 focus-within:border-skydark pb-1.5 px-1 transition-colors">
+                    <input
+                        type="text"
+                        id="menuSearchInput"
+                        oninput="renderMenuFolderList()"
+                        placeholder="Cari folder..."
+                        class="w-full bg-transparent text-sm text-ink placeholder:text-muted focus:outline-none"
+                    >
+                    <svg class="w-4 h-4 text-muted shrink-0 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.3-4.3"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Label Kategori -->
+            <p class="font-mono text-xs font-bold text-muted uppercase tracking-wider mb-2">카테고리 · Folders</p>
+
+            <!-- Daftar Folder Kategori (Terupdate Otomatis) -->
+            <div id="menuFolderList" class="overflow-y-auto space-y-1 pr-1 flex-1">
+                <!-- Diisi otomatis lewat JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- POPUP MODAL: UPLOAD FOTO / VIDEO                          -->
+    <!-- ========================================================= -->
+    <div id="uploadModal" class="hidden fixed inset-0 z-50 bg-ink/35 backdrop-blur-xs flex items-center justify-center p-4" onclick="handleBackdropClick(event, 'uploadModal')">
+        <div class="animate-pop w-full max-w-md bg-skycard border border-[#DCE9F6] rounded-3xl p-5 sm:p-6 shadow-window">
+            <div class="flex items-center justify-between pb-3 border-b border-skysoft mb-4">
+                <span class="font-mono text-xs font-bold text-skydark bg-skysoft px-2.5 py-1 rounded-lg">UPLOAD_MEDIA</span>
+                <button
+                    type="button"
+                    onclick="closeUploadModal()"
+                    class="text-xs font-mono text-muted hover:text-ink px-2 py-1 rounded-lg hover:bg-skybase"
+                >
+                    Tutup ✕
+                </button>
+            </div>
+
+            <form id="uploadForm" onsubmit="handleMediaUpload(event)" class="space-y-4">
+                <div>
+                    <label for="uploadFolderSelect" class="block text-xs font-bold text-ink mb-1.5">Folder Kategori</label>
+                    <select
+                        id="uploadFolderSelect"
+                        class="w-full rounded-2xl bg-skybase border border-[#DCE9F6] px-3.5 py-2.5 text-sm text-ink focus:outline-none focus:border-skydark"
+                    >
+                        <!-- Diisi otomatis lewat JavaScript -->
+                    </select>
+                </div>
+
+                <div>
+                    <label for="uploadTitleInput" class="block text-xs font-bold text-ink mb-1.5">Judul / Catatan Singkat (Opsional)</label>
+                    <input
+                        type="text"
+                        id="uploadTitleInput"
+                        placeholder="Contoh: 240830 Gyuvin clip"
+                        class="w-full rounded-2xl bg-skybase border border-[#DCE9F6] px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:outline-none focus:border-skydark"
+                    >
+                </div>
+
+                <div>
+                    <label for="mediaFileInput" class="block text-xs font-bold text-ink mb-1.5">Pilih File Foto atau Video</label>
+                    <input
+                        type="file"
+                        id="mediaFileInput"
+                        accept="image/*,video/*"
+                        required
+                        class="block w-full text-xs text-muted file:mr-3 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-skysoft file:text-skydark hover:file:bg-skyaccent hover:file:text-white cursor-pointer bg-skybase border border-[#DCE9F6] rounded-2xl p-1.5"
+                    >
+                    <p id="uploadErrorMsg" class="hidden text-xs text-red-600 mt-1.5 font-medium"></p>
+                </div>
+
+                <div class="flex items-center justify-end gap-2 pt-2">
+                    <button
+                        type="button"
+                        onclick="closeUploadModal()"
+                        class="px-4 py-2.5 rounded-2xl text-xs font-semibold text-muted hover:bg-skybase"
+                    >
+                        Batal
+                    </button>
+                    <button
+                        type="submit"
+                        class="px-5 py-2.5 rounded-2xl bg-skyaccent hover:bg-skydark text-white text-xs font-bold transition-colors shadow-xs"
+                    >
+                        Simpan ke Arsip
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- POPUP MODAL: PREVIEW FOTO / VIDEO                         -->
+    <!-- ========================================================= -->
+    <div id="previewModal" class="hidden fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4" onclick="handleBackdropClick(event, 'previewModal')">
+        <div class="animate-pop w-full max-w-2xl bg-skycard border border-[#DCE9F6] rounded-3xl p-4 sm:p-6 shadow-window max-h-[90vh] flex flex-col">
+            <div class="flex items-center justify-between gap-2 pb-3 border-b border-skysoft mb-4">
+                <div class="min-w-0">
+                    <span id="previewFolderBadge" class="font-mono text-[11px] font-bold text-skydark bg-skysoft px-2 py-0.5 rounded-md">FOLDER</span>
+                    <h3 id="previewTitle" class="font-bold text-sm sm:text-base text-ink truncate mt-1">Judul Media</h3>
+                </div>
+                <button
+                    type="button"
+                    onclick="closePreviewModal()"
+                    class="px-3 py-1.5 rounded-xl bg-skybase hover:bg-skysoft text-xs font-mono font-bold text-ink shrink-0"
+                >
+                    Tutup ✕
+                </button>
+            </div>
+
+            <div id="previewMediaContainer" class="flex-1 min-h-0 flex items-center justify-center bg-skybase rounded-2xl overflow-hidden p-2">
+                <!-- Diisi otomatis lewat JavaScript -->
+            </div>
+
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-skysoft text-xs text-muted">
+                <span id="previewMeta" class="font-mono"></span>
+                <button
+                    type="button"
+                    id="deleteMediaBtn"
+                    class="px-3 py-1.5 rounded-xl text-red-600 hover:bg-red-50 font-semibold transition-colors"
+                >
+                    Hapus File
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Pemberitahuan Halus (Tanpa alert) -->
+    <div id="toastBanner" class="hidden fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-ink text-white text-xs font-medium px-4 py-2.5 rounded-2xl shadow-lg max-w-xs text-center">
+        <span id="toastMessage"></span>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT BERSIH & TERSTRUKTUR                           -->
+    <!-- ========================================================= -->
+    <script>
+        // Daftar kategori folder sesuai referensi (kosongkan media di awal)
+        const FOLDERS = [
+            'Twitter',
+            'Instagram',
+            'Shorts',
+            'Plus Chat',
+            'Bubble',
+            'Japan FC',
+            'Weibo',
+            'Naver Post'
+        ];
+
+        // State aplikasi: dimulai dengan 0 item (tanpa contoh foto/video bawaan)
+        const state = {
+            currentView: 'home',       // 'home' | 'archive'
+            selectedFolder: 'ALL',     // 'ALL' atau salah satu nama di FOLDERS
+            selectedType: 'ALL',       // 'ALL' | 'photo' | 'video'
+            mediaItems: [],            // { id, folder, type, title, url, fileName, createdAt }
+            activePreviewId: null
+        };
+
+        let toastTimer = null;
+
+        /**
+         * Menampilkan pesan toast singkat di bagian bawah layar.
+         * @param {string} msg
+         */
+        function showToast(msg) {
+            try {
+                const banner = document.getElementById('toastBanner');
+                const textEl = document.getElementById('toastMessage');
+                if (!banner || !textEl) return;
+
+                textEl.textContent = msg;
+                banner.classList.remove('hidden');
+
+                if (toastTimer) clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => {
+                    banner.classList.add('hidden');
+                }, 2600);
+            } catch (err) {
+                console.error('Gagal menampilkan toast:', err);
+            }
+        }
+
+        /**
+         * Menghitung jumlah item media per folder serta total keseluruhan.
+         * @returns {{ total: number, byFolder: Record<string, number> }}
+         */
+        function getFolderCounts() {
+            const byFolder = {};
+            FOLDERS.forEach((f) => {
+                byFolder[f] = 0;
+            });
+
+            let total = 0;
+            for (const item of state.mediaItems) {
+                total += 1;
+                if (Object.prototype.hasOwnProperty.call(byFolder, item.folder)) {
+                    byFolder[item.folder] += 1;
+                }
+            }
+            return { total, byFolder };
+        }
+
+        /**
+         * Memperbarui angka jumlah item di header, menu, dan arsip.
+         */
+        function updateCountsUI() {
+            const { total, byFolder } = getFolderCounts();
+
+            const badgeEl = document.getElementById('headerTotalBadge');
+            if (badgeEl) badgeEl.textContent = String(total);
+
+            const countTextEl = document.getElementById('activeFolderCountText');
+            if (countTextEl) {
+                const currentCount = state.selectedFolder === 'ALL'
+                    ? total
+                    : (byFolder[state.selectedFolder] || 0);
+                countTextEl.textContent = `${currentCount} item tersimpan`;
+            }
+        }
+
+        /**
+         * Berpindah antara tampilan 'home' dan 'archive'.
+         * @param {'home' | 'archive'} viewName
+         */
+        function switchView(viewName) {
+            try {
+                state.currentView = viewName;
+                const homeEl = document.getElementById('homeView');
+                const archiveEl = document.getElementById('archiveView');
+                const homeBtn = document.getElementById('navHomeBtn');
+                const archiveBtn = document.getElementById('navArchiveBtn');
+
+                if (viewName === 'archive') {
+                    homeEl.classList.add('hidden');
+                    archiveEl.classList.remove('hidden');
+
+                    archiveBtn.className = 'px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-skycard text-skydark shadow-xs flex items-center gap-1.5';
+                    homeBtn.className = 'px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-muted hover:text-ink';
+
+                    renderCategoryChips();
+                    renderArchiveGrid();
+                } else {
+                    archiveEl.classList.add('hidden');
+                    homeEl.classList.remove('hidden');
+
+                    homeBtn.className = 'px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-skycard text-skydark shadow-xs';
+                    archiveBtn.className = 'px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-muted hover:text-ink flex items-center gap-1.5';
+                }
+                updateCountsUI();
+            } catch (err) {
+                console.error('Gagal mengganti tampilan:', err);
+            }
+        }
+
+        /**
+         * Membuka arsip pada folder tertentu dan langsung pindah ke halaman Archive.
+         * @param {string} folderName
+         */
+        function selectFolderAndOpenArchive(folderName) {
+            state.selectedFolder = folderName || 'ALL';
+            closeMenuModal();
+            switchView('archive');
+        }
+
+        /**
+         * Mengatur filter tipe media ('ALL' | 'photo' | 'video').
+         * @param {'ALL' | 'photo' | 'video'} type
+         */
+        function setTypeFilter(type) {
+            state.selectedType = type;
+            document.querySelectorAll('.type-filter-btn').forEach((btn) => {
+                const isActive = btn.getAttribute('data-type') === type;
+                btn.className = isActive
+                    ? 'type-filter-btn px-3 py-1 rounded-xl text-xs font-bold bg-skycard text-skydark shadow-xs'
+                    : 'type-filter-btn px-3 py-1 rounded-xl text-xs font-semibold text-muted hover:text-ink';
+            });
+            renderArchiveGrid();
+        }
+
+        /**
+         * Mereset filter kategori dan tipe media ke default.
+         */
+        function resetArchiveFilters() {
+            state.selectedFolder = 'ALL';
+            state.selectedType = 'ALL';
+            setTypeFilter('ALL');
+            renderCategoryChips();
+            renderArchiveGrid();
+        }
+
+        /**
+         * Merender chip kategori di halaman Archive.
+         */
+        function renderCategoryChips() {
+            const container = document.getElementById('categoryChipsContainer');
+            if (!container) return;
+
+            const { total, byFolder } = getFolderCounts();
+            const chips = [{ label: 'Semua Folder', value: 'ALL', count: total }];
+            FOLDERS.forEach((f) => {
+                chips.push({ label: f, value: f, count: byFolder[f] || 0 });
+            });
+
+            container.innerHTML = '';
+            chips.forEach((chip) => {
+                const isSelected = state.selectedFolder === chip.value;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = isSelected
+                    ? 'shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold bg-skyaccent text-white transition-all flex items-center gap-1.5'
+                    : 'shrink-0 px-3 py-1.5 rounded-xl text-xs font-semibold bg-skybase hover:bg-skysoft text-ink border border-[#DCE9F6] transition-all flex items-center gap-1.5';
+
+                const labelSpan = document.createElement('span');
+                labelSpan.textContent = chip.label;
+
+                const countSpan = document.createElement('span');
+                countSpan.className = isSelected ? 'font-mono text-[10px] opacity-90' : 'font-mono text-[10px] text-muted';
+                countSpan.textContent = String(chip.count);
+
+                btn.appendChild(labelSpan);
+                btn.appendChild(countSpan);
+                btn.addEventListener('click', () => {
+                    state.selectedFolder = chip.value;
+                    renderCategoryChips();
+                    renderArchiveGrid();
+                });
+                container.appendChild(btn);
+            });
+        }
+
+        /**
+         * Merender daftar folder di dalam popup Menu.txt sesuai pencarian.
+         */
+        function renderMenuFolderList() {
+            const listEl = document.getElementById('menuFolderList');
+            const searchEl = document.getElementById('menuSearchInput');
+            if (!listEl) return;
+
+            const query = (searchEl ? searchEl.value : '').trim().toLowerCase();
+            const { total, byFolder } = getFolderCounts();
+
+            listEl.innerHTML = '';
+
+            // Baris "분류 전체보기" (Semua Kategori)
+            if (!query || '분류 전체보기'.includes(query) || 'semua'.includes(query) || 'all'.includes(query)) {
+                const allRow = createFolderRowElement('분류 전체보기', total, () => selectFolderAndOpenArchive('ALL'));
+                listEl.appendChild(allRow);
+            }
+
+            // Daftar folder kategori
+            let matchedFolders = 0;
+            FOLDERS.forEach((folderName) => {
+                if (!query || folderName.toLowerCase().includes(query)) {
+                    matchedFolders += 1;
+                    const row = createFolderRowElement(folderName, byFolder[folderName] || 0, () => selectFolderAndOpenArchive(folderName));
+                    listEl.appendChild(row);
+                }
+            });
+
+            if (listEl.children.length === 0 && matchedFolders === 0) {
+                const emptyRow = document.createElement('p');
+                emptyRow.className = 'text-center text-xs text-muted py-6';
+                emptyRow.textContent = 'Folder tidak ditemukan.';
+                listEl.appendChild(emptyRow);
+            }
+        }
+
+        /**
+         * Membuat elemen baris folder pada Menu.txt dengan ikon folder, nama, jumlah, dan panah dropdown.
+         * @param {string} name
+         * @param {number} count
+         * @param {Function} onSelect
+         * @returns {HTMLButtonElement}
+         */
+        function createFolderRowElement(name, count, onSelect) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'w-full flex items-center justify-between px-3 py-2.5 rounded-2xl hover:bg-skybase transition-colors text-left group';
+            btn.addEventListener('click', onSelect);
+
+            const leftDiv = document.createElement('div');
+            leftDiv.className = 'flex items-center gap-2.5 min-w-0';
+
+            // Ikon folder biru muda
+            leftDiv.innerHTML = `
+                <svg class="w-4 h-4 text-skyaccent shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4 6a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"/>
+                </svg>
+            `;
+
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'text-sm font-medium text-ink truncate';
+            nameSpan.textContent = name;
+
+            const countSpan = document.createElement('span');
+            countSpan.className = 'font-mono text-xs text-muted';
+            countSpan.textContent = String(count);
+
+            leftDiv.appendChild(nameSpan);
+            leftDiv.appendChild(countSpan);
+
+            const chevronSpan = document.createElement('span');
+            chevronSpan.className = 'text-muted group-hover:text-skydark text-xs transition-transform';
+            chevronSpan.textContent = '⌄';
+
+            btn.appendChild(leftDiv);
+            btn.appendChild(chevronSpan);
+            return btn;
+        }
+
+        /**
+         * Merender grid foto/video di halaman Archive.
+         */
+        function renderArchiveGrid() {
+            const gridEl = document.getElementById('mediaGrid');
+            const emptyEl = document.getElementById('emptyArchiveState');
+            const titleEl = document.getElementById('activeFolderTitle');
+            const resetBtn = document.getElementById('resetFiltersBtn');
+            if (!gridEl || !emptyEl || !titleEl) return;
+
+            titleEl.textContent = state.selectedFolder === 'ALL' ? 'Semua Folder' : state.selectedFolder;
+
+            const isFiltered = state.selectedFolder !== 'ALL' || state.selectedType !== 'ALL';
+            if (resetBtn) {
+                resetBtn.classList.toggle('hidden', !isFiltered);
+            }
+
+            const filteredItems = state.mediaItems.filter((item) => {
+                const matchFolder = state.selectedFolder === 'ALL' || item.folder === state.selectedFolder;
+                const matchType = state.selectedType === 'ALL' || item.type === state.selectedType;
+                return matchFolder && matchType;
+            });
+
+            updateCountsUI();
+
+            gridEl.innerHTML = '';
+
+            if (filteredItems.length === 0) {
+                gridEl.classList.add('hidden');
+                emptyEl.classList.remove('hidden');
+                return;
+            }
+
+            emptyEl.classList.add('hidden');
+            gridEl.classList.remove('hidden');
+
+            filteredItems.forEach((item) => {
+                const card = document.createElement('button');
+                card.type = 'button';
+                card.className = 'group relative aspect-square rounded-2xl bg-skybase border border-[#DCE9F6] overflow-hidden text-left hover:border-skyaccent transition-all shadow-xs';
+                card.addEventListener('click', () => openPreviewModal(item.id));
+
+                if (item.type === 'video') {
+                    const videoEl = document.createElement('video');
+                    videoEl.src = item.url;
+                    videoEl.className = 'w-full h-full object-cover';
+                    videoEl.muted = true;
+                    videoEl.playsInline = true;
+                    videoEl.preload = 'metadata';
+                    card.appendChild(videoEl);
+
+                    const badge = document.createElement('span');
+                    badge.className = 'absolute top-2 right-2 font-mono text-[10px] font-bold px-2 py-0.5 rounded-full bg-ink/75 text-white';
+                    badge.textContent = 'VIDEO';
+                    card.appendChild(badge);
+                } else {
+                    const imgEl = document.createElement('img');
+                    imgEl.src = item.url;
+                    imgEl.alt = item.title;
+                    imgEl.className = 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300';
+                    card.appendChild(imgEl);
+                }
+
+                // Overlay informasi singkat di bawah kartu
+                const captionBar = document.createElement('div');
+                captionBar.className = 'absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-ink/75 via-ink/35 to-transparent text-white';
+
+                const folderTag = document.createElement('p');
+                folderTag.className = 'font-mono text-[10px] text-skysoft truncate';
+                folderTag.textContent = item.folder;
+
+                const titleText = document.createElement('p');
+                titleText.className = 'text-xs font-semibold truncate';
+                titleText.textContent = item.title;
+
+                captionBar.appendChild(folderTag);
+                captionBar.appendChild(titleText);
+                card.appendChild(captionBar);
+
+                gridEl.appendChild(card);
+            });
+        }
+
+        /**
+         * Mengisi pilihan folder pada form unggah dan membuka modal upload.
+         */
+        function openUploadModal() {
+            try {
+                const selectEl = document.getElementById('uploadFolderSelect');
+                const errorEl = document.getElementById('uploadErrorMsg');
+                if (errorEl) {
+                    errorEl.textContent = '';
+                    errorEl.classList.add('hidden');
+                }
+
+                if (selectEl) {
+                    selectEl.innerHTML = '';
+                    FOLDERS.forEach((folderName) => {
+                        const opt = document.createElement('option');
+                        opt.value = folderName;
+                        opt.textContent = folderName;
+                        if (state.selectedFolder !== 'ALL' && state.selectedFolder === folderName) {
+                            opt.selected = true;
+                        }
+                        selectEl.appendChild(opt);
+                    });
+                }
+
+                document.getElementById('uploadModal').classList.remove('hidden');
+            } catch (err) {
+                console.error('Gagal membuka modal upload:', err);
+                showToast('Terjadi kesalahan saat membuka form upload.');
+            }
+        }
+
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.add('hidden');
+            const form = document.getElementById('uploadForm');
+            if (form) form.reset();
+        }
+
+        /**
+         * Menangani unggahan file foto atau video menggunakan URL.createObjectURL.
+         * @param {SubmitEvent} event
+         */
+        function handleMediaUpload(event) {
+            event.preventDefault();
+            const errorEl = document.getElementById('uploadErrorMsg');
+
+            try {
+                const folderEl = document.getElementById('uploadFolderSelect');
+                const titleEl = document.getElementById('uploadTitleInput');
+                const fileEl = document.getElementById('mediaFileInput');
+
+                if (!fileEl || !fileEl.files || fileEl.files.length === 0) {
+                    throw new Error('Silakan pilih file foto atau video terlebih dahulu.');
+                }
+
+                const file = fileEl.files[0];
+                const isImage = file.type.startsWith('image/');
+                const isVideo = file.type.startsWith('video/');
+
+                if (!isImage && !isVideo) {
+                    throw new Error('Format file tidak didukung. Pilih file gambar atau video.');
+                }
+
+                const objectUrl = URL.createObjectURL(file);
+                const mediaType = isVideo ? 'video' : 'photo';
+                const folderName = folderEl ? folderEl.value : FOLDERS[0];
+                const rawTitle = titleEl ? titleEl.value.trim() : '';
+                const cleanTitle = rawTitle || file.name;
+
+                const newItem = {
+                    id: `media_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+                    folder: folderName,
+                    type: mediaType,
+                    title: cleanTitle,
+                    url: objectUrl,
+                    fileName: file.name,
+                    createdAt: new Date().toLocaleDateString('id-ID', {
+                        day: '2-digit',
+                        month: 'short',
+                        year: 'numeric'
+                    })
+                };
+
+                state.mediaItems.unshift(newItem);
+                state.selectedFolder = folderName;
+
+                if (errorEl) {
+                    errorEl.textContent = '';
+                    errorEl.classList.add('hidden');
+                }
+
+                closeUploadModal();
+                switchView('archive');
+                showToast(`Tersimpan ke folder ${folderName}.`);
+            } catch (err) {
+                console.error('Error saat mengunggah media:', err);
+                if (errorEl) {
+                    errorEl.textContent = err && err.message ? err.message : 'Gagal memproses file.';
+                    errorEl.classList.remove('hidden');
+                } else {
+                    showToast('Gagal mengunggah file.');
+                }
+            }
+        }
+
+        /**
+         * Membuka modal preview foto atau video.
+         * @param {string} itemId
+         */
+        function openPreviewModal(itemId) {
+            try {
+                const item = state.mediaItems.find((m) => m.id === itemId);
+                if (!item) return;
+
+                state.activePreviewId = item.id;
+                document.getElementById('previewFolderBadge').textContent = item.folder;
+                document.getElementById('previewTitle').textContent = item.title;
+                document.getElementById('previewMeta').textContent = `${item.type.toUpperCase()} · ${item.createdAt}`;
+
+                const container = document.getElementById('previewMediaContainer');
+                container.innerHTML = '';
+
+                if (item.type === 'video') {
+                    const vid = document.createElement('video');
+                    vid.src = item.url;
+                    vid.controls = true;
+                    vid.autoplay = true;
+                    vid.className = 'max-h-[62vh] max-w-full rounded-xl';
+                    container.appendChild(vid);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = item.url;
+                    img.alt = item.title;
+                    img.className = 'max-h-[62vh] max-w-full object-contain rounded-xl';
+                    container.appendChild(img);
+                }
+
+                const deleteBtn = document.getElementById('deleteMediaBtn');
+                deleteBtn.onclick = () => deleteMediaItem(item.id);
+
+                document.getElementById('previewModal').classList.remove('hidden');
+            } catch (err) {
+                console.error('Gagal membuka preview:', err);
+            }
+        }
+
+        function closePreviewModal() {
+            const container = document.getElementById('previewMediaContainer');
+            if (container) {
+                // Hentikan pemutaran video jika sedang diputar
+                const vid = container.querySelector('video');
+                if (vid) vid.pause();
+                container.innerHTML = '';
+            }
+            state.activePreviewId = null;
+            document.getElementById('previewModal').classList.add('hidden');
+        }
+
+        /**
+         * Menghapus item media dari state dan melepaskan URL object.
+         * @param {string} itemId
+         */
+        function deleteMediaItem(itemId) {
+            try {
+                const target = state.mediaItems.find((m) => m.id === itemId);
+                if (target && target.url && target.url.startsWith('blob:')) {
+                    URL.revokeObjectURL(target.url);
+                }
+                state.mediaItems = state.mediaItems.filter((m) => m.id !== itemId);
+                closePreviewModal();
+                renderCategoryChips();
+                renderArchiveGrid();
+                showToast('Item dihapus dari arsip.');
+            } catch (err) {
+                console.error('Gagal menghapus item:', err);
+            }
+        }
+
+        function openMenuModal() {
+            renderMenuFolderList();
+            document.getElementById('menuModal').classList.remove('hidden');
+            const input = document.getElementById('menuSearchInput');
+            if (input) {
+                setTimeout(() => input.focus(), 50);
+            }
+        }
+
+        function closeMenuModal() {
+            const modal = document.getElementById('menuModal');
+            if (modal) modal.classList.add('hidden');
+            const input = document.getElementById('menuSearchInput');
+            if (input) input.value = '';
+        }
+
+        function handleBackdropClick(event, modalId) {
+            if (event.target && event.target.id === modalId) {
+                if (modalId === 'menuModal') closeMenuModal();
+                if (modalId === 'uploadModal') closeUploadModal();
+                if (modalId === 'previewModal') closePreviewModal();
+            }
+        }
+
+        // Menutup modal saat tombol Escape ditekan
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeMenuModal();
+                closeUploadModal();
+                closePreviewModal();
+            }
+        });
+
+        // Inisialisasi awal aplikasi
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCountsUI();
+            renderMenuFolderList();
+            renderCategoryChips();
+            renderArchiveGrid();
+        });
+    </script>
+</body>
+</html>
